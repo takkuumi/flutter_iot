@@ -55,8 +55,22 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = A38F8B98299579880018A868 /* native.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = CA60F0FEBE701C83950DBC35;
+			remoteGlobalIDString = CA604E3772EE35BD21DB45D4;
 			remoteInfo = "native-staticlib";
+		};
+		E18847F129B44CA100D5C9D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18847EB29B44CA000D5C9D4 /* rust-security.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA60F600FAD4CD9B4338DF63;
+			remoteInfo = "rust-security-cdylib";
+		};
+		E18847F329B44CA100D5C9D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18847EB29B44CA000D5C9D4 /* rust-security.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA603A4A8DC87EB79883AE9D;
+			remoteInfo = "rust-security-staticlib";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -91,6 +105,7 @@
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		A38F8B98299579880018A868 /* native.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = native.xcodeproj; path = ../native/native.xcodeproj; sourceTree = "<group>"; };
+		E18847EB29B44CA000D5C9D4 /* rust-security.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "rust-security.xcodeproj"; path = "../rust-security/rust-security.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,7 @@
 		33CC10E42044A3C60003C045 = {
 			isa = PBXGroup;
 			children = (
+				E18847EB29B44CA000D5C9D4 /* rust-security.xcodeproj */,
 				A38F8B98299579880018A868 /* native.xcodeproj */,
 				33FAB671232836740065AC1E /* Runner */,
 				33CEB47122A05771004F2AC0 /* Flutter */,
@@ -184,6 +200,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E18847EC29B44CA000D5C9D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18847F229B44CA100D5C9D4 /* rust-security.dylib */,
+				E18847F429B44CA100D5C9D4 /* librust-security_static.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +277,10 @@
 					ProductGroup = A38F8B99299579880018A868 /* Products */;
 					ProjectRef = A38F8B98299579880018A868 /* native.xcodeproj */;
 				},
+				{
+					ProductGroup = E18847EC29B44CA000D5C9D4 /* Products */;
+					ProjectRef = E18847EB29B44CA000D5C9D4 /* rust-security.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -274,6 +303,20 @@
 			fileType = archive.ar;
 			path = libnative_static.a;
 			remoteRef = A38F8B9F299579880018A868 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18847F229B44CA100D5C9D4 /* rust-security.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = "rust-security.dylib";
+			remoteRef = E18847F129B44CA100D5C9D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18847F429B44CA100D5C9D4 /* librust-security_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "librust-security_static.a";
+			remoteRef = E18847F329B44CA100D5C9D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

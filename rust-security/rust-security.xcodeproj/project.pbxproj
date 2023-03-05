@@ -8,17 +8,17 @@
     objects = {
 /* Begin PBXBuildFile section */
         
-                CA60E401F9EDE39432D223D4 /* Cargo.toml in Sources */ = {
+                CA607DA481ABA2C1A4635F17 /* Cargo.toml in Sources */ = {
                     isa = PBXBuildFile;
-                    fileRef = CA60D4DDCC9F3EF4668187A5 /* Cargo.toml */;
+                    fileRef = CA60D760BF7F3EF4668187A5 /* Cargo.toml */;
                     settings = {
                         COMPILER_FLAGS = "--lib"; /* == OTHER_INPUT_FILE_FLAGS */
                     };
                 };
                 
-                CA60E401F9ED35BD21DB45D4 /* Cargo.toml in Sources */ = {
+                CA607DA481AB1539B17988B7 /* Cargo.toml in Sources */ = {
                     isa = PBXBuildFile;
-                    fileRef = CA60D4DDCC9F3EF4668187A5 /* Cargo.toml */;
+                    fileRef = CA60D760BF7F3EF4668187A5 /* Cargo.toml */;
                     settings = {
                         COMPILER_FLAGS = "--lib"; /* == OTHER_INPUT_FILE_FLAGS */
                     };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
-        CA60D4DDCC9FAC6C1400ACA8 /* PBXBuildRule */ = {
+        CA60D760BF7FAC6C1400ACA8 /* PBXBuildRule */ = {
             isa = PBXBuildRule;
             compilerSpec = com.apple.compilers.proxy.script;
             dependencyFile = "$(DERIVED_FILE_DIR)/$(CARGO_XCODE_TARGET_ARCH)-$(EXECUTABLE_NAME).d";
@@ -45,26 +45,26 @@
 
 /* Begin PBXFileReference section */
         
-        CA60D6C25AB0EAC3B2E0A336 /* cdylib */ = {
+        CA60F600FAD4CD9B4338DF63 /* cdylib */ = {
             isa = PBXFileReference;
             explicitFileType = "compiled.mach-o.dylib";
             includeInIndex = 0;
-            name = "native.dylib";
+            name = "rust-security.dylib";
             sourceTree = TARGET_BUILD_DIR;
         };
-        CA604E3772EE2969E816930C /* staticlib */ = {
+        CA603A4A8DC87EB79883AE9D /* staticlib */ = {
             isa = PBXFileReference;
             explicitFileType = "archive.ar";
             includeInIndex = 0;
-            name = "libnative_static.a";
+            name = "librust-security_static.a";
             sourceTree = TARGET_BUILD_DIR;
         };
-                CA60D4DDCC9F3EF4668187A5 /* Cargo.toml */ = {
+                CA60D760BF7F3EF4668187A5 /* Cargo.toml */ = {
                     isa = PBXFileReference;
                     lastKnownFileType = text;
                     fileEncoding = 4;
                     name = "Cargo.toml";
-                    path = "/Users/takumi/Workspace/flutter_iot/native/Cargo.toml";
+                    path = "/Users/takumi/Workspace/flutter_iot/rust-security/Cargo.toml";
                     sourceTree = "<group>";
             };
                     /* Rust needs libresolv */
@@ -76,7 +76,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-        CA60D4DDCC9F98AF0B5890DB /* Frameworks */ = {
+        CA60D760BF7F98AF0B5890DB /* Frameworks */ = {
             isa = PBXGroup;
             children = (
                 ADDEDBA66A6E2,
@@ -96,23 +96,23 @@
                     sourceTree = "<group>";
                 };
 
-        CA60D4DDCC9F22869D176AE5 /* Products */ = {
+        CA60D760BF7F22869D176AE5 /* Products */ = {
             isa = PBXGroup;
             children = (
-                CA60D6C25AB0EAC3B2E0A336,
-CA604E3772EE2969E816930C,
+                CA60F600FAD4CD9B4338DF63,
+CA603A4A8DC87EB79883AE9D,
 
             );
             name = Products;
             sourceTree = "<group>";
         };
 
-        CA60D4DDCC9FD65BC3C892A8 /* Main */ = {
+        CA60D760BF7FD65BC3C892A8 /* Main */ = {
             isa = PBXGroup;
             children = (
-                CA60D4DDCC9F3EF4668187A5,
-CA60D4DDCC9F22869D176AE5,
-CA60D4DDCC9F98AF0B5890DB,
+                CA60D760BF7F3EF4668187A5,
+CA60D760BF7F22869D176AE5,
+CA60D760BF7F98AF0B5890DB,
 
             );
             sourceTree = "<group>";
@@ -121,108 +121,108 @@ CA60D4DDCC9F98AF0B5890DB,
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        CA60D6C25AB0E39432D223D4 /* native-cdylib */ = {
+        CA60F600FAD4A2C1A4635F17 /* rust-security-cdylib */ = {
             isa = PBXNativeTarget;
-            buildConfigurationList = CA6067291B46E39432D223D4;
+            buildConfigurationList = CA6032608B30A2C1A4635F17;
             buildPhases = (
-                CA601EE06501E39432D223D4 /* Sources */,
-                CA60D4DDCC9FAF6EBB7F357C /* Universal Binary lipo */,
+                CA6079D47E62A2C1A4635F17 /* Sources */,
+                CA60D760BF7FAF6EBB7F357C /* Universal Binary lipo */,
             );
             buildRules = (
-                CA60D4DDCC9FAC6C1400ACA8 /* PBXBuildRule */,
+                CA60D760BF7FAC6C1400ACA8 /* PBXBuildRule */,
             );
             dependencies = (
             );
-            name = "native-cdylib";
-            productName = "native.dylib";
-            productReference = CA60D6C25AB0EAC3B2E0A336;
+            name = "rust-security-cdylib";
+            productName = "rust-security.dylib";
+            productReference = CA60F600FAD4CD9B4338DF63;
             productType = "com.apple.product-type.library.dynamic";
         };
-        CA604E3772EE35BD21DB45D4 /* native-staticlib */ = {
+        CA603A4A8DC81539B17988B7 /* rust-security-staticlib */ = {
             isa = PBXNativeTarget;
-            buildConfigurationList = CA6067291B4635BD21DB45D4;
+            buildConfigurationList = CA6032608B301539B17988B7;
             buildPhases = (
-                CA601EE0650135BD21DB45D4 /* Sources */,
-                CA60D4DDCC9FAF6EBB7F357C /* Universal Binary lipo */,
+                CA6079D47E621539B17988B7 /* Sources */,
+                CA60D760BF7FAF6EBB7F357C /* Universal Binary lipo */,
             );
             buildRules = (
-                CA60D4DDCC9FAC6C1400ACA8 /* PBXBuildRule */,
+                CA60D760BF7FAC6C1400ACA8 /* PBXBuildRule */,
             );
             dependencies = (
             );
-            name = "native-staticlib";
-            productName = "libnative_static.a";
-            productReference = CA604E3772EE2969E816930C;
+            name = "rust-security-staticlib";
+            productName = "librust-security_static.a";
+            productReference = CA603A4A8DC87EB79883AE9D;
             productType = "com.apple.product-type.library.static";
         };
         
 /* End PBXNativeTarget section */
 
-        CA601EE06501E39432D223D4 = {
+        CA6079D47E62A2C1A4635F17 = {
                     isa = PBXSourcesBuildPhase;
                     buildActionMask = 2147483647;
                     files = (
-                        CA60E401F9EDE39432D223D4
+                        CA607DA481ABA2C1A4635F17
                     );
                     runOnlyForDeploymentPostprocessing = 0;
                 };
                 
-        CA6067291B46E39432D223D4 /* cdylib */ = {
+        CA6032608B30A2C1A4635F17 /* cdylib */ = {
             isa = XCConfigurationList;
             buildConfigurations = (
-                CA60FC63FD69E39432D223D4 /* Release */,
-                CA60DA7D018AE39432D223D4 /* Debug */,
+                CA606D235898A2C1A4635F17 /* Release */,
+                CA606E6CFC32A2C1A4635F17 /* Debug */,
             );
             defaultConfigurationIsVisible = 0;
             defaultConfigurationName = Release;
         };
-            CA60FC63FD69E39432D223D4 /* cdylib */ = {
+            CA606D235898A2C1A4635F17 /* cdylib */ = {
                 isa = XCBuildConfiguration;
                 buildSettings = {
-                    PRODUCT_NAME = "native";
-                    "CARGO_XCODE_CARGO_FILE_NAME" = "libnative.dylib";
-                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "libnative.d";
+                    PRODUCT_NAME = "rust-security";
+                    "CARGO_XCODE_CARGO_FILE_NAME" = "librust_security.dylib";
+                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "librust_security.d";
                     SUPPORTED_PLATFORMS = "macosx";
                     
                     DYLIB_COMPATIBILITY_VERSION = "0";
                 };
                 name = Release;
             };
-            CA60DA7D018AE39432D223D4 /* cdylib */ = {
+            CA606E6CFC32A2C1A4635F17 /* cdylib */ = {
                 isa = XCBuildConfiguration;
                 buildSettings = {
-                    PRODUCT_NAME = "native";
-                    "CARGO_XCODE_CARGO_FILE_NAME" = "libnative.dylib";
-                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "libnative.d";
+                    PRODUCT_NAME = "rust-security";
+                    "CARGO_XCODE_CARGO_FILE_NAME" = "librust_security.dylib";
+                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "librust_security.d";
                     SUPPORTED_PLATFORMS = "macosx";
                     
                     DYLIB_COMPATIBILITY_VERSION = "0";
                 };
                 name = Debug;
-            };CA601EE0650135BD21DB45D4 = {
+            };CA6079D47E621539B17988B7 = {
                     isa = PBXSourcesBuildPhase;
                     buildActionMask = 2147483647;
                     files = (
-                        CA60E401F9ED35BD21DB45D4
+                        CA607DA481AB1539B17988B7
                     );
                     runOnlyForDeploymentPostprocessing = 0;
                 };
                 
-        CA6067291B4635BD21DB45D4 /* staticlib */ = {
+        CA6032608B301539B17988B7 /* staticlib */ = {
             isa = XCConfigurationList;
             buildConfigurations = (
-                CA60FC63FD6935BD21DB45D4 /* Release */,
-                CA60DA7D018A35BD21DB45D4 /* Debug */,
+                CA606D2358981539B17988B7 /* Release */,
+                CA606E6CFC321539B17988B7 /* Debug */,
             );
             defaultConfigurationIsVisible = 0;
             defaultConfigurationName = Release;
         };
-            CA60FC63FD6935BD21DB45D4 /* staticlib */ = {
+            CA606D2358981539B17988B7 /* staticlib */ = {
                 isa = XCBuildConfiguration;
                 buildSettings = {
-                    PRODUCT_NAME = "native_static";
-                    "CARGO_XCODE_CARGO_FILE_NAME" = "libnative.a";
-                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "libnative.d";
+                    PRODUCT_NAME = "rust-security_static";
+                    "CARGO_XCODE_CARGO_FILE_NAME" = "librust_security.a";
+                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "librust_security.d";
                     SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos";
                     SKIP_INSTALL = YES;
                 INSTALL_GROUP = "";
@@ -232,12 +232,12 @@ CA60D4DDCC9F98AF0B5890DB,
                 };
                 name = Release;
             };
-            CA60DA7D018A35BD21DB45D4 /* staticlib */ = {
+            CA606E6CFC321539B17988B7 /* staticlib */ = {
                 isa = XCBuildConfiguration;
                 buildSettings = {
-                    PRODUCT_NAME = "native_static";
-                    "CARGO_XCODE_CARGO_FILE_NAME" = "libnative.a";
-                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "libnative.d";
+                    PRODUCT_NAME = "rust-security_static";
+                    "CARGO_XCODE_CARGO_FILE_NAME" = "librust_security.a";
+                    "CARGO_XCODE_CARGO_DEP_FILE_NAME" = "librust_security.d";
                     SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos";
                     SKIP_INSTALL = YES;
                 INSTALL_GROUP = "";
@@ -248,7 +248,7 @@ CA60D4DDCC9F98AF0B5890DB,
                 name = Debug;
             };
 
-        CA60D4DDCC9FAF6EBB7F357C /* LipoScript */ = {
+        CA60D760BF7FAF6EBB7F357C /* LipoScript */ = {
             name = "Universal Binary lipo";
             isa = PBXShellScriptBuildPhase;
             buildActionMask = 2147483647;
@@ -266,17 +266,17 @@ CA60D4DDCC9F98AF0B5890DB,
             shellScript = "# generated with cargo-xcode 1.5.0\n\n            set -eux; cat \"$DERIVED_FILE_DIR/$ARCHS-$EXECUTABLE_NAME.xcfilelist\" | tr \'\\n\' \'\\0\' | xargs -0 lipo -create -output \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\n            if [ ${LD_DYLIB_INSTALL_NAME:+1} ]; then\n                install_name_tool -id \"$LD_DYLIB_INSTALL_NAME\" \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\n            fi\n        ";
         };
 
-        CA60D4DDCC9F80E02D6C7F57 = {
+        CA60D760BF7F80E02D6C7F57 = {
             isa = XCConfigurationList;
             buildConfigurations = (
-                CA60C0AF37A33CC16B37690B /* Release */,
-                CA60C0AF37A3228BE02872F8 /* Debug */,
+                CA6095E6A7D53CC16B37690B /* Release */,
+                CA6095E6A7D5228BE02872F8 /* Debug */,
             );
             defaultConfigurationIsVisible = 0;
             defaultConfigurationName = Release;
         };
 
-        CA60C0AF37A33CC16B37690B = {
+        CA6095E6A7D53CC16B37690B = {
             isa = XCBuildConfiguration;
             buildSettings = {
                 
@@ -293,7 +293,7 @@ CA60D4DDCC9F98AF0B5890DB,
             "CARGO_XCODE_TARGET_OS[sdk=iphoneos*]" = "ios";
             "CARGO_XCODE_TARGET_OS[sdk=appletvsimulator*]" = "tvos";
             "CARGO_XCODE_TARGET_OS[sdk=appletvos*]" = "tvos";
-            PRODUCT_NAME = "native";
+            PRODUCT_NAME = "rust-security";
             MARKETING_VERSION = "0.1.0";
             CURRENT_PROJECT_VERSION = "0.1";
             SDKROOT = macosx;
@@ -303,7 +303,7 @@ CA60D4DDCC9F98AF0B5890DB,
             name = Release;
         };
 
-        CA60C0AF37A3228BE02872F8 = {
+        CA6095E6A7D5228BE02872F8 = {
             isa = XCBuildConfiguration;
             buildSettings = {
                 
@@ -320,7 +320,7 @@ CA60D4DDCC9F98AF0B5890DB,
             "CARGO_XCODE_TARGET_OS[sdk=iphoneos*]" = "ios";
             "CARGO_XCODE_TARGET_OS[sdk=appletvsimulator*]" = "tvos";
             "CARGO_XCODE_TARGET_OS[sdk=appletvos*]" = "tvos";
-            PRODUCT_NAME = "native";
+            PRODUCT_NAME = "rust-security";
             MARKETING_VERSION = "0.1.0";
             CURRENT_PROJECT_VERSION = "0.1";
             SDKROOT = macosx;
@@ -331,22 +331,22 @@ CA60D4DDCC9F98AF0B5890DB,
             name = Debug;
         };
 
-        CA60D4DDCC9FE04653AD465F = {
+        CA60D760BF7FE04653AD465F = {
             isa = PBXProject;
             attributes = {
                 LastUpgradeCheck = 1300;
                 TargetAttributes = {
-                    CA60D6C25AB0E39432D223D4 = {
+                    CA60F600FAD4A2C1A4635F17 = {
                         CreatedOnToolsVersion = 9.2;
                         ProvisioningStyle = Automatic;
                     };
-                    CA604E3772EE35BD21DB45D4 = {
+                    CA603A4A8DC81539B17988B7 = {
                         CreatedOnToolsVersion = 9.2;
                         ProvisioningStyle = Automatic;
                     };
                                     };
             };
-            buildConfigurationList = CA60D4DDCC9F80E02D6C7F57;
+            buildConfigurationList = CA60D760BF7F80E02D6C7F57;
             compatibilityVersion = "Xcode 11.4";
              developmentRegion = en;
             hasScannedForEncodings = 0;
@@ -354,18 +354,18 @@ CA60D4DDCC9F98AF0B5890DB,
                     en,
                     Base,
             );
-            mainGroup = CA60D4DDCC9FD65BC3C892A8;
-            productRefGroup = CA60D4DDCC9F22869D176AE5 /* Products */;
+            mainGroup = CA60D760BF7FD65BC3C892A8;
+            productRefGroup = CA60D760BF7F22869D176AE5 /* Products */;
             projectDirPath = "";
             projectRoot = "";
             targets = (
-                CA60D6C25AB0E39432D223D4,
-CA604E3772EE35BD21DB45D4,
+                CA60F600FAD4A2C1A4635F17,
+CA603A4A8DC81539B17988B7,
 
             );
         };
 
     };
-    rootObject = CA60D4DDCC9FE04653AD465F;
+    rootObject = CA60D760BF7FE04653AD465F;
 }
     

@@ -21,26 +21,6 @@ use std::sync::Arc;
 
 // Section: wire functions
 
-fn wire_platform_impl(port_: MessagePort) {
-  FLUTTER_RUST_BRIDGE_HANDLER.wrap(
-    WrapInfo {
-      debug_name: "platform",
-      port: Some(port_),
-      mode: FfiCallMode::Normal,
-    },
-    move || move |task_callback| Ok(platform()),
-  )
-}
-fn wire_rust_release_mode_impl(port_: MessagePort) {
-  FLUTTER_RUST_BRIDGE_HANDLER.wrap(
-    WrapInfo {
-      debug_name: "rust_release_mode",
-      port: Some(port_),
-      mode: FfiCallMode::Normal,
-    },
-    move || move |task_callback| Ok(rust_release_mode()),
-  )
-}
 // Section: wrapper structs
 
 // Section: static checks
@@ -65,21 +45,6 @@ where
 }
 // Section: impl IntoDart
 
-impl support::IntoDart for Platform {
-  fn into_dart(self) -> support::DartAbi {
-    match self {
-      Self::Unknown => 0,
-      Self::Android => 1,
-      Self::Ios => 2,
-      Self::Windows => 3,
-      Self::Unix => 4,
-      Self::MacIntel => 5,
-      Self::MacApple => 6,
-      Self::Wasm => 7,
-    }
-    .into_dart()
-  }
-}
 // Section: executor
 
 support::lazy_static! {

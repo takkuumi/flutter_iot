@@ -11,3 +11,28 @@ crate-type = ["cdylib", "staticlib"]
 [dependencies]
 anyhow = "1"
 flutter_rust_bridge = "1"
+crc = "2.0"
+scursor = "0.1"
+tokio = { version = "1", features = ["net", "sync", "io-util", "io-std", "time", "rt", "rt-multi-thread", "macros"] }
+tracing = "0.1"
+
+# TLS dependencies
+pem = { version = "1.0", optional = true }
+pkcs8 = { version = "0.7", features = ["encryption", "pem", "std"], optional = true }
+rx509 = { version = "0.2", optional = true }
+tokio-rustls = { version = "0.23", features = ["dangerous_configuration", "tls12"], default-features = false, optional = true }
+# serial dependencies
+tokio-serial = { version = "5.4", default-features = false, optional = true }
+
+[dev-dependencies]
+clap = { version = "3.2.20", features = ["derive"] }
+tokio-stream = "0.1"
+tokio-util = { version = "0.6", features = ["codec"] }
+tokio-test = "0.4.2"
+sfio-tokio-mock-io = "0.2"
+tracing-subscriber = "0.2"
+
+[features]
+default = ["tls", "serial"]
+tls = ["pem", "pkcs8", "rx509", "tokio-rustls"]
+serial = ["tokio-serial"]
